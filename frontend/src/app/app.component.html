@@ -1,0 +1,48 @@
+<h2>{{ title }}</h2>
+<hr />
+
+
+<form #orderForm="ngForm">
+    <div class="form-group">
+        <label>Nome: </label>
+        <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" ngModel>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Endereço: </label>
+        <input type="text" class="form-control" name="endereco" id="endereco" placeholder="Endereco" ngModel>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Longitude: </label>
+        <input type="text" class="form-control" name="longitude" id="longitude" placeholder="Longitude" ngModel>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+        <label>Latitude: </label>
+        <input type="text" class="form-control" name="latitude" id="latitude" placeholder="Latitude" ngModel>
+    </div>
+  
+    <br><br>
+
+    <button class="btn btn-primary" (click)="addItem()">Adicionar Ponto de coleta</button>
+
+    <br><br>
+
+    <button class="btn btn-primary" (click)="editItem()">Editar Ponto de coleta</button>
+
+    <br><br>
+
+    <button class="btn btn-primary" (click)="selectPontos">Listar Pontos de coleta</button>
+
+    <br><br>
+
+</form>
+
+{{ orderItems }}
