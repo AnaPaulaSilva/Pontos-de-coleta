@@ -18,6 +18,13 @@
     <br>
 
     <div class="form-group">
+        <label>Latitude: </label>
+        <input type="text" class="form-control" name="latitude" id="latitude" placeholder="Latitude" ngModel>
+    </div>
+
+    <br>
+
+    <div class="form-group">
         <label>Longitude: </label>
         <input type="text" class="form-control" name="longitude" id="longitude" placeholder="Longitude" ngModel>
     </div>
@@ -25,24 +32,19 @@
     <br>
 
     <div class="form-group">
-        <label>Latitude: </label>
-        <input type="text" class="form-control" name="latitude" id="latitude" placeholder="Latitude" ngModel>
+        <button class="btn btn-primary" (click)="addItem()">Adicionar Ponto de coleta</button>
     </div>
-  
-    <br><br>
+    
+    <br>
 
-    <button class="btn btn-primary" (click)="addItem()">Adicionar Ponto de coleta</button>
+    <div class="form-group">
+        <button class="btn btn-primary" (click)="editItem()">Editar Ponto de coleta</button>
+    </div>
+    
+    <br>
 
-    <br><br>
-
-    <button class="btn btn-primary" (click)="editItem()">Editar Ponto de coleta</button>
-
-    <br><br>
-
-    <button class="btn btn-primary" (click)="selectPontos">Listar Pontos de coleta</button>
-
-    <br><br>
+    <div class="form-group" *ngIf="selectLocais.length >= 0">
+        <button class="btn btn-success" (click)="consultaLocais()">Listar Pontos de coleta</button>
+    </div>
 
 </form>
-
-{{ orderItems }}

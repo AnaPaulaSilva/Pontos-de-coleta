@@ -9,21 +9,28 @@ import { local } from './local';
 export class AppComponent {
   title = 'Pontos de Reciclagem';
 
-  selectLocal = new local('nome', 'endereco', 1000, 2000);  
-  selectPontos : local;
-  orderItems = [];
+  listaLocais : local;
+  selectLocais = [];
   
+  nome: string;
+  endereco: string;
+  latitude: number;
+  longitude: number;
+
   addItem() {
-    if (this.selectLocal.latitude > 0) {
-      this.orderItems.push(new local(this.selectLocal.nome, this.selectLocal.endereco, this.selectLocal.latitude, this.selectLocal.longitude));
+    if (this.listaLocais.latitude > 0) {
+      this.selectLocais.push(new local(this.listaLocais.nome, this.listaLocais.endereco, this.listaLocais.latitude, this.listaLocais.longitude));
     }
-    
-    this.selectLocal.latitude = 0;
-    console.log(this.orderItems);
+    this.listaLocais.latitude = 0;
+    console.log(this.selectLocais);
+  }
+
+  consultaLocais(){
+    this.listaLocais.nome != null;
   }
 
   editItem(){
-    if(this.selectLocal.nome = 'nome'){
+    if(this.listaLocais.nome = 'nome'){
       
     }
   }
